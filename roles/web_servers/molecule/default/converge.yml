@@ -2,6 +2,8 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include test.web_servers"
+    - name: "Include ns.web_servers"
       include_role:
-        name: "test.web_servers"
+        name: "ns.web_servers"
+
+- import_playbook: ../../tasks/main.yml
