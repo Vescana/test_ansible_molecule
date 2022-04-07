@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "01285f30-7a9a-4614-ba08-efcdef2d3fdc", "counter": 13, "stdout": "\u001b[0;31m - name: remove httpd package (Ubuntu)\u001b[0m", "start_line": 12, "end_line": 13, "runner_ident": "dfe9fb4f-1236-404d-bded-a7ac087aa23d", "created": "2022-04-07T15:51:30.141540"}

@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "554158ef-284b-4390-8203-13bf4e7a224c", "counter": 7, "stdout": "\u001b[0;31mThe error appears to be in '/home/vescana/test_ansible_molecule/playbooks/remove_site.yml': line 3, column 8, but may\u001b[0m", "start_line": 6, "end_line": 7, "runner_ident": "860934a6-2f8c-4494-a7d3-f420318727d7", "created": "2022-04-07T15:48:37.444187"}

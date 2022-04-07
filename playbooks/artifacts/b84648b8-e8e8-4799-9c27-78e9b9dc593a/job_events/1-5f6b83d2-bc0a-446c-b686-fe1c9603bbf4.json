@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "5f6b83d2-bc0a-446c-b686-fe1c9603bbf4", "counter": 1, "stdout": "\u001b[0;31mERROR! the playbook: playbooks/remove_site.yml could not be found\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "b84648b8-e8e8-4799-9c27-78e9b9dc593a", "created": "2022-04-07T15:50:04.912652"}
