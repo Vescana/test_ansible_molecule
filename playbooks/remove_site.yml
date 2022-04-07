@@ -1,4 +1,4 @@
---
+---
 
 - hosts: web_servers
   become: true
@@ -12,10 +12,10 @@
       state: absent
     when: ansible_distribution == "Ubuntu"
 
- - name: remove httpd package (Ubuntu)
-   dnf:
-     name:
-       - httpd
-       - php
-     state: absent
-   when: ansible_distribution == "CentOS"   
+  - name: remove httpd package (Ubuntu)
+    dnf:
+      name:
+        - httpd
+        - php
+      state: absent
+    when: ansible_distribution == "CentOS"   
