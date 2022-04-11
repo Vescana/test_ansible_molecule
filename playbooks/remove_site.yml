@@ -18,4 +18,4 @@
         - httpd
         - php
       state: absent
-    when: ansible_distribution == "CentOS"   
+    when: ansible_distribution == "CentOS"
