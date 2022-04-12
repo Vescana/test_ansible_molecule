@@ -5,7 +5,7 @@
   tasks:
     - name: "Include ns.web_servers"
       include_role: 
-        - name: "ns.web_servers"
+        name: "ns.web_servers"
 
     - name: Create default file
       copy:
@@ -19,4 +19,4 @@
           <body>Hello world!</body>
           </html>
 
-- import_playbook: ../../tasks/main.yml
+#- import_playbook: ../../tasks/main.yml

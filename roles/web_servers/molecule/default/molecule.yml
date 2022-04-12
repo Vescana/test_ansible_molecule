@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: quai.io/centos/centos:stream8
+    image: quay.io/centos/centos:stream8
     command: /sbin/init
     tmpfs:
       - /run
