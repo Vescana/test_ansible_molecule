@@ -1,0 +1,19 @@
+
+PLAY [web_servers] *************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [192.192.1.3][0m
+[0;32mok: [192.192.1.4][0m
+
+TASK [remove apache2 package (Ubuntu)] *****************************************
+[0;33mchanged: [192.192.1.4][0m
+[0;33mchanged: [192.192.1.3][0m
+
+TASK [remove httpd package (Ubuntu)] *******************************************
+[0;36mskipping: [192.192.1.3][0m
+[0;36mskipping: [192.192.1.4][0m
+
+PLAY RECAP *********************************************************************
+[0;33m192.192.1.3[0m                : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0    [0;36mskipped=1   [0m rescued=0    ignored=0   
+[0;33m192.192.1.4[0m                : [0;32mok=2   [0m [0;33mchanged=1   [0m unreachable=0    failed=0    [0;36mskipped=1   [0m rescued=0    ignored=0   
+

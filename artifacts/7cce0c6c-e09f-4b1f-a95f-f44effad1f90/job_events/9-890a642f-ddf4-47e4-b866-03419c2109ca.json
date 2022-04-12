@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "890a642f-ddf4-47e4-b866-03419c2109ca", "counter": 9, "stdout": "\u001b[0;31m- name: Install Apache\u001b[0m", "start_line": 8, "end_line": 9, "runner_ident": "7cce0c6c-e09f-4b1f-a95f-f44effad1f90", "created": "2022-04-11T16:10:08.195378"}

@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "5553eedc-2ccd-4a12-aa5a-a9b11ba1a0f7", "counter": 9, "stdout": "\u001b[0;31m- name: install apache2 package (Ubuntu)\u001b[0m", "start_line": 8, "end_line": 9, "runner_ident": "591aefc3-e227-407a-8180-2c8dd28d5dbb", "created": "2022-04-11T16:25:22.655209"}

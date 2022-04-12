@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "1674a8cd-d457-43ee-8377-a01e731dd8a3", "counter": 1, "stdout": "\u001b[0;31mERROR! conflicting action statements: copy, content\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "931ea692-9f31-448c-a9c9-7c90d61531db", "created": "2022-04-11T16:22:48.952214"}

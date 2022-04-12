@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "5fd9f756-cae9-4f34-98bc-9652a1663858", "counter": 3, "stdout": "\u001b[0;31mThe error appears to be in '/home/vescana/test_ansible_molecule/roles/web_servers/tasks/main.yml': line 4, column 3, but may\u001b[0m", "start_line": 2, "end_line": 3, "runner_ident": "bc54361e-0018-42ec-bc1e-0cda57ee0ed5", "created": "2022-04-11T15:59:55.960667"}

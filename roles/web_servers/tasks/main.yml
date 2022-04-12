@@ -1,8 +1,10 @@
 ---
 # tasks file for web_servers
-
+- name: print distro version
+  debug: msg = "{{ ansible_distribution }} {{ ansible_distribution_version }}"
+  
 - name: install apache2 package (Ubuntu)
-  apt:
+  package:
     name:
       - apache2
       - libapache2-mod-php
@@ -10,7 +12,7 @@
   when: ansible_distribution == "Ubuntu"
 
 - name: install httpd package (CentOS)
-  dnf:
+  package:
     name:
       - httpd
       - php

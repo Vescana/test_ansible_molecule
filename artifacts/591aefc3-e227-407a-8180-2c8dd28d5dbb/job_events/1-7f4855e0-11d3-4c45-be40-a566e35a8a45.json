@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "7f4855e0-11d3-4c45-be40-a566e35a8a45", "counter": 1, "stdout": "\u001b[0;31mERROR! 'apt' is not a valid attribute for a Play\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "591aefc3-e227-407a-8180-2c8dd28d5dbb", "created": "2022-04-11T16:25:22.647491"}
