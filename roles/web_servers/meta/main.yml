@@ -43,9 +43,11 @@ galaxy_info:
   platforms:
     - name: ubuntu
       versions:
+      - 18.04
       - 20.04
     - name: centos
       versions:
+      - 8
       - 9  
 
   galaxy_tags: []

@@ -1,0 +1,4 @@
+---
+# vars file for RedHat family OSs
+apache_package: httpd
+php_package: php

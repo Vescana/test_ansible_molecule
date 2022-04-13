@@ -4,16 +4,27 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: instance
-    image: quay.io/centos/centos:stream8
-    command: /sbin/init
-    tmpfs:
-      - /run
-      - /tmp
+  - name: molecule_ubuntu1804
+    image: geerlingguy/docker-ubuntu1804-ansible
+    pre_build_image: true
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
+  - name: molecule_ubuntu2004
+    image: geerlingguy/docker-ubuntu2004-ansible
     pre_build_image: true
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
+  - name: molecule_centos8
+    image: geerlingguy/docker-centos8-ansible
+    pre_build_image: true
+    command: ${MOLECULE_DOCKER_COMMAND:-""}
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
 provisioner:
   name: ansible
   lint:

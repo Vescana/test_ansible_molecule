@@ -1,0 +1,82 @@
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [192.192.1.3][0m
+[0;32mok: [192.192.1.5][0m
+
+TASK [update repository index (CentOS)] ****************************************
+[0;36mskipping: [192.192.1.3][0m
+[0;32mok: [192.192.1.5][0m
+
+TASK [update repository index (Ubuntu)] ****************************************
+[0;36mskipping: [192.192.1.5][0m
+[0;32mok: [192.192.1.3][0m
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [192.192.1.5][0m
+[0;32mok: [192.192.1.3][0m
+
+PLAY [web_servers] *************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[0;32mok: [192.192.1.5][0m
+[0;32mok: [192.192.1.3][0m
+
+TASK [web_servers : print distro] **********************************************
+[0;32mok: [192.192.1.3] => {[0m
+[0;32m    "msg": "Ubuntu"[0m
+[0;32m}[0m
+[0;32mok: [192.192.1.5] => {[0m
+[0;32m    "msg": "CentOS"[0m
+[0;32m}[0m
+
+TASK [web_servers : print distro version] **************************************
+[0;32mok: [192.192.1.3] => {[0m
+[0;32m    "msg": "20.04"[0m
+[0;32m}[0m
+[0;32mok: [192.192.1.5] => {[0m
+[0;32m    "msg": "9"[0m
+[0;32m}[0m
+
+TASK [web_servers : print distro OS family] ************************************
+[0;32mok: [192.192.1.3] => {[0m
+[0;32m    "msg": "Debian"[0m
+[0;32m}[0m
+[0;32mok: [192.192.1.5] => {[0m
+[0;32m    "msg": "RedHat"[0m
+[0;32m}[0m
+
+TASK [web_servers : include vars] **********************************************
+[0;32mok: [192.192.1.3][0m
+[0;32mok: [192.192.1.5][0m
+
+TASK [web_servers : print Debian vars] *****************************************
+[0;32mok: [192.192.1.3] => {[0m
+[0;32m    "msg": "apache2 libapache2-mod-php"[0m
+[0;32m}[0m
+[0;36mskipping: [192.192.1.5][0m
+
+TASK [web_servers : print RedHat vars] *****************************************
+[0;36mskipping: [192.192.1.3][0m
+[0;32mok: [192.192.1.5] => {[0m
+[0;32m    "msg": "httpd php"[0m
+[0;32m}[0m
+
+TASK [web_servers : update Debian OSs] *****************************************
+[0;36mskipping: [192.192.1.5][0m
+[0;32mok: [192.192.1.3][0m
+
+TASK [web_servers : install web service] ***************************************
+[0;32mok: [192.192.1.5][0m
+[0;31mfatal: [192.192.1.3]: FAILED! => {"cache_update_time": 1649853405, "cache_updated": false, "changed": false, "msg": "'/usr/bin/apt-get -y -o \"Dpkg::Options::=--force-confdef\" -o \"Dpkg::Options::=--force-confold\"       install 'httpd'' failed: E: Package 'httpd' has no installation candidate\n", "rc": 100, "stderr": "E: Package 'httpd' has no installation candidate\n", "stderr_lines": ["E: Package 'httpd' has no installation candidate"], "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nPackage httpd is a virtual package provided by:\n  nginx-light 1.18.0-0ubuntu1.3\n  nginx-full 1.18.0-0ubuntu1.3\n  nginx-extras 1.18.0-0ubuntu1.3\n  lighttpd 1.4.55-1ubuntu1.20.04.1\n  nginx-core 1.18.0-0ubuntu1.3\n  apache2 2.4.41-4ubuntu3.10\n  yaws 2.0.7+dfsg-1\n  webfs 1.21+ds1-12\n  tntnet 2.2.1-4build1\n  ocsigenserver 2.16.0-2\n  mini-httpd 1.30-2\n  micro-httpd 20140814-2\n\n", "stdout_lines": ["Reading package lists...", "Building dependency tree...", "Reading state information...", "Package httpd is a virtual package provided by:", "  nginx-light 1.18.0-0ubuntu1.3", "  nginx-full 1.18.0-0ubuntu1.3", "  nginx-extras 1.18.0-0ubuntu1.3", "  lighttpd 1.4.55-1ubuntu1.20.04.1", "  nginx-core 1.18.0-0ubuntu1.3", "  apache2 2.4.41-4ubuntu3.10", "  yaws 2.0.7+dfsg-1", "  webfs 1.21+ds1-12", "  tntnet 2.2.1-4build1", "  ocsigenserver 2.16.0-2", "  mini-httpd 1.30-2", "  micro-httpd 20140814-2", ""]}[0m
+
+TASK [web_servers : enable web service] ****************************************
+[0;32mok: [192.192.1.5][0m
+
+PLAY RECAP *********************************************************************
+[0;31m192.192.1.3[0m                : [0;32mok=10  [0m changed=0    unreachable=0    [0;31mfailed=1   [0m [0;36mskipped=2   [0m rescued=0    ignored=0   
+[0;32m192.192.1.5[0m                : [0;32mok=11  [0m changed=0    unreachable=0    failed=0    [0;36mskipped=3   [0m rescued=0    ignored=0   
+

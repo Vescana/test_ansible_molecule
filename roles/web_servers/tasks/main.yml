@@ -1,27 +1,51 @@
 ---
 # tasks file for web_servers
+- name: print distro
+  debug: 
+    msg="{{ ansible_distribution }}"
+
 - name: print distro version
-  debug: msg = "{{ ansible_distribution }} {{ ansible_distribution_version }}"
-  
-- name: install apache2 package (Ubuntu)
+  debug: 
+    msg="{{ ansible_distribution_version }}"
+
+- name: print distro OS family
+  debug: 
+    msg="{{ ansible_os_family }}"
+
+- name: include vars
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: print Debian vars
+  debug: msg="{{ apache_package }} {{ php_package }}"
+  when: ansible_os_family == "Debian"
+
+- name: print RedHat vars
+  debug: msg="{{ apache_package }} {{ php_package }}"
+  when: ansible_os_family == "RedHat"
+
+- name: update Debian OSs
+  apt:
+    update_cache: true
+    cache_valid_time: 86400
+  when: ansible_os_family == "Debian"
+
+#- name: install apache2 package (Ubuntu)
+#  apt:
+#    name:
+#    - apache2
+#    - libapache2-mod-php
+#    state: latest
+#  when: ansible_distribution == "Ubuntu"
+
+- name: install web
   package:
     name:
-      - apache2
-      - libapache2-mod-php
-    state: latest
-  when: ansible_distribution == "Ubuntu"
+    - "{{ apache_package }}"
+    - "{{ php_package }}"
+    state: present
 
-- name: install httpd package (CentOS)
-  package:
-    name:
-      - httpd
-      - php
-    state: latest
-  when: ansible_distribution == "CentOS"
-
-- name: start and enable httpd (CentOS)
+- name: enable web
   service:
-    name: httpd
+    name: "{{ apache_package }}"
     state: started
-    enabled: yes
-  when: ansible_distribution == "CentOS"
+    enabled: true
