@@ -1,0 +1,1 @@
+[0;31mERROR! the role 'roles/web_servers' was not found in /home/vescana/test_ansible_molecule/project/roles:/home/vescana/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/home/vescana/test_ansible_molecule/project[0m
