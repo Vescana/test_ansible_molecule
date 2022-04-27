@@ -1,0 +1,8 @@
+---
+
+- name: uninstall web
+  package:
+    name:
+      - "{{ apache_package }}"
+      - "{{ php_package }}"
+    state: absent

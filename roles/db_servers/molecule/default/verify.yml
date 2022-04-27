@@ -1,0 +1,32 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+  # - name: Example assertion
+  #   assert:
+  #     that: true
+
+    # - name: Collect facts about system services
+    #   service_facts:
+    #   register: services_state
+
+    # - name: Debug system services
+    #   debug:
+    #     var: services_state 
+
+    # - name: Populate service facts
+    #   service_facts:
+    #     - debug:
+    #         msg: MariaDB installed!
+    #       when: "'mariadb' in services"
+
+    # - name: Check if MariaDB exists
+    #   shell: "if chkconfig --list | grep -q mariadb; then echo true; else echo false; fi;"
+    #   register: service_exists
+
+    # - name: Debug system services
+    #   debug:
+    #     var: service_exists 

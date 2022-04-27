@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "2db62e85-2ee2-4533-b920-0b59b1a59575", "counter": 1, "stdout": "\u001b[0;31mERROR! the role 'file_servers' was not found in /runner/playbooks/roles:/runner/roles:/runner/playbooks\u001b[0m", "start_line": 0, "end_line": 1, "runner_ident": "a046a7db-d707-4b74-8c83-a97b852cb3f1", "created": "2022-04-27T11:16:53.253350"}

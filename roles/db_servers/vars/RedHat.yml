@@ -1,0 +1,3 @@
+---
+# vars file for RedHat family OSs
+mariadb_server: mariadb

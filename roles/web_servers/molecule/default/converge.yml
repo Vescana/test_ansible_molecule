@@ -18,5 +18,3 @@
           <head><title>Hello world!</title></head>
           <body>Hello world!</body>
           </html>
-
-#- import_playbook: ../../tasks/main.yml

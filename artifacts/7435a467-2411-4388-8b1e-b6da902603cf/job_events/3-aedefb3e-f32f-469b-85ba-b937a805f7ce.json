@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "aedefb3e-f32f-469b-85ba-b937a805f7ce", "counter": 3, "stdout": "\u001b[0;31mThe error appears to be in '/runner/project/site.yml': line 24, column 7, but may\u001b[0m", "start_line": 2, "end_line": 3, "runner_ident": "7435a467-2411-4388-8b1e-b6da902603cf", "created": "2022-04-20T15:49:17.654990"}

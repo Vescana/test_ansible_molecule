@@ -1,0 +1,47 @@
+[0;34mansible-playbook [core 2.12.4rc1.post0][0m
+[0;34m  config file = None[0m
+[0;34m  configured module search path = ['/home/runner/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules'][0m
+[0;34m  ansible python module location = /usr/local/lib/python3.8/site-packages/ansible[0m
+[0;34m  ansible collection location = /home/runner/.ansible/collections:/usr/share/ansible/collections[0m
+[0;34m  executable location = /usr/local/bin/ansible-playbook[0m
+[0;34m  python version = 3.8.12 (default, Sep 21 2021, 00:10:52) [GCC 8.5.0 20210514 (Red Hat 8.5.0-3)][0m
+[0;34m  jinja version = 3.0.3[0m
+[0;34m  libyaml = True[0m
+[0;34mNo config file found; using defaults[0m
+[0;34mhost_list declined parsing /runner/inventory/hosts as it did not pass its verify_file() method[0m
+[0;34mscript declined parsing /runner/inventory/hosts as it did not pass its verify_file() method[0m
+[0;34mauto declined parsing /runner/inventory/hosts as it did not pass its verify_file() method[0m
+[0;34mParsed /runner/inventory/hosts inventory source with ini plugin[0m
+[0;34mSkipping callback 'awx_display', as we already have a stdout callback.[0m
+[0;34mSkipping callback 'default', as we already have a stdout callback.[0m
+[0;34mSkipping callback 'minimal', as we already have a stdout callback.[0m
+[0;34mSkipping callback 'oneline', as we already have a stdout callback.[0m
+
+PLAYBOOK: site.yml *************************************************************
+[0;34m2 plays in ../playbooks/site.yml[0m
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+[1;30mtask path: /runner/playbooks/site.yml:21[0m
+[0;34m<192.192.1.3> ESTABLISH SSH CONNECTION FOR USER: None[0m
+[0;34m<192.192.1.3> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/220284d85d"' 192.192.1.3 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''[0m
+[0;34m<192.192.1.5> ESTABLISH SSH CONNECTION FOR USER: None[0m
+[0;34m<192.192.1.5> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o 'ControlPath="/home/runner/.ansible/cp/52e69cbd5d"' 192.192.1.5 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''[0m
+[0;34m<192.192.1.3> (255, b'', b"Warning: Permanently added '192.192.1.3' (ECDSA) to the list of known hosts.\r\nrunner@192.192.1.3: Permission denied (publickey).\r\n")[0m
+[1;31mfatal: [192.192.1.3]: UNREACHABLE! => {[0m
+[1;31m    "changed": false,[0m
+[1;31m    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.192.1.3' (ECDSA) to the list of known hosts.\r\nrunner@192.192.1.3: Permission denied (publickey).",[0m
+[1;31m    "unreachable": true[0m
+[1;31m}[0m
+[0;34m<192.192.1.5> (255, b'', b"Warning: Permanently added '192.192.1.5' (ECDSA) to the list of known hosts.\r\nrunner@192.192.1.5: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n")[0m
+[1;31mfatal: [192.192.1.5]: UNREACHABLE! => {[0m
+[1;31m    "changed": false,[0m
+[1;31m    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '192.192.1.5' (ECDSA) to the list of known hosts.\r\nrunner@192.192.1.5: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",[0m
+[1;31m    "unreachable": true[0m
+[1;31m}[0m
+
+PLAY RECAP *********************************************************************
+[0;31m192.192.1.3[0m                : ok=0    changed=0    [1;31munreachable=1   [0m failed=0    skipped=0    rescued=0    ignored=0   
+[0;31m192.192.1.5[0m                : ok=0    changed=0    [1;31munreachable=1   [0m failed=0    skipped=0    rescued=0    ignored=0   
+
