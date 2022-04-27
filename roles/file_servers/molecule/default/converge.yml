@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include ns.file_servers"
+      include_role:
+        name: "ns.file_servers"

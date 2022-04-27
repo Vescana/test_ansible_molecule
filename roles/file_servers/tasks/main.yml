@@ -1,0 +1,19 @@
+---
+# tasks file for file_servers
+
+- name: update Debian OSs
+  apt:
+    update_cache: true
+  changed_when: false
+  when: ansible_os_family == "Debian"
+
+- name: update RedHat OSs
+  dnf:
+    update_cache: true
+  changed_when: false
+  when: ansible_os_family == "RedHat"
+
+- name: Install samba package
+  package:
+    name: samba
+    state: latest
