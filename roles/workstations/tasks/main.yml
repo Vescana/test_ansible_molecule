@@ -1,0 +1,27 @@
+---
+# tasks file for workstations
+
+- name: update Debian OSs
+  apt:
+    update_cache: true
+  changed_when: false
+  when: ansible_os_family == "Debian"
+
+- name: update RedHat OSs
+  dnf:
+    update_cache: true
+  changed_when: false
+  when: ansible_os_family == "RedHat"
+
+- name: install unzip
+  package:
+    name: unzip
+
+- name: install terraform
+  unarchive:
+    src: https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip
+    dest: /usr/local/bin
+    remote_src: yes
+    mode: 0755
+    owner: root
+    group: root
