@@ -10,19 +10,26 @@
       url: http://localhost/
       status_code: 200
 
-  - name: Verify the page returns status 200 and fail if word 'world' is not in the page content
-    uri:
-      url: http://localhost/
-      return_content: yes
-    register: this
-    failed_when: "'world' not in this.content"
+  # - name: Verify the page returns status 200 and fail if word 'world' is not in the page content
+  #   uri:
+  #     url: http://localhost/
+  #     return_content: yes
+  #   register: this
+  #   failed_when: "'world' not in this.content"
 
-  - name: Verify the page returns status 200 and fail if word 'animal' is in the page content
+  # - name: Verify the page returns status 200 and fail if word 'animal' is in the page content
+  #   uri:
+  #     url: http://localhost/
+  #     return_content: yes
+  #   register: this
+  #   failed_when: "'animal' in this.content"
+
+  - name: Verify the page returns status 200 and fail if word 'Vescana' is not in the page content
     uri:
       url: http://localhost/
       return_content: yes
     register: this
-    failed_when: "'animal' in this.content"
+    failed_when: "'Vescana' not in this.content"
 
   - name: Verify 
     uri:

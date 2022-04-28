@@ -7,14 +7,14 @@
       include_role: 
         name: "ns.web_servers"
 
-    - name: Create default file
-      copy:
-        dest: /var/www/html/index.html
-        mode: 0644
-        owner: root
-        group: root
-        content: |
-          <html>
-          <head><title>Hello world!</title></head>
-          <body>Hello world!</body>
-          </html>
+    # - name: Create default file
+    #   copy:
+    #     dest: /var/www/html/index.html
+    #     mode: 0644
+    #     owner: root
+    #     group: root
+    #     content: |
+    #       <html>
+    #       <head><title>Hello world!</title></head>
+    #       <body>Hello world!</body>
+    #       </html>
