@@ -1,5 +1,6 @@
 ---
 tasks file for web_servers
+
 - name: print ansible_version.full
   debug:
     msg="Ansible version is {{ ansible_version.full }}"
