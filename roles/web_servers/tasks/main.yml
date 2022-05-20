@@ -1,8 +1,8 @@
 ---
-# tasks file for web_servers
-# - name: print ansible_version.full
-#   debug:
-#     msg="Ansible version is {{ ansible_version.full }}"
+tasks file for web_servers
+- name: print ansible_version.full
+  debug:
+    msg="Ansible version is {{ ansible_version.full }}"
 
 #- name: print distro
 #  debug: 
@@ -19,9 +19,9 @@
 - name: include vars
   include_vars: "{{ ansible_os_family }}.yml"
 
-# - name: print ansible user
-#   debug:
-#     msg="Ansible user is {{ ansible_user_id }}"
+- name: print ansible user
+  debug:
+    msg="Ansible user is {{ ansible_user_id }}"
 
 #- name: print Debian vars
 #  debug: msg="{{ apache_package }} {{ php_package }}"
