@@ -1,5 +1,4 @@
 ---
-tasks file for web_servers
 
 - name: print ansible_version.full
   debug:
